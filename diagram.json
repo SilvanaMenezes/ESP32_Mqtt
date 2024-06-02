@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "author": "wokwi",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-dht22", "id": "dht22", "top": 29.1, "left": 186.6, "attrs": {} },
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp32", "top": 16, "left": 16, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp32:5", "dht22:1", "green", [ "vcc" ] ],
+    [ "esp32:2", "dht22:2", "blue", [ "data" ] ],
+    [ "esp32:GND.1", "dht22:3", "black", [ "gnd" ] ],
+    [ "dht22:GND", "esp32:GND.1", "black", [ "v0" ] ],
+    [ "dht22:SDA", "esp32:D15", "green", [ "v0" ] ],
+    [ "dht22:VCC", "esp32:3V3", "red", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
